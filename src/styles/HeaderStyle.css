@@ -1,0 +1,177 @@
+/* Header CSS */
+header .navbar {
+  position: absolute;
+  width: 100%;
+  background-color: transparent;
+  z-index: 1000;
+  height: 6rem;
+  padding: 0 1rem;
+}
+
+header .navbar.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(224, 217, 204);
+  transition: all 0.15s ease-in-out;
+  animation: stickyTransition 0.5s both;
+  box-shadow: 0 2px 3px rgba(96, 96, 96, 0.1);
+}
+
+@keyframes stickyTransition {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Logo styling */
+header .navbar .navbar-brand {
+  margin-right: auto;
+  padding: 0;
+}
+
+header .logo img {
+  width: 15rem;
+  height: auto;
+  object-fit: contain;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Navigation links */
+header .nav-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  padding: 0 1rem !important;
+  font-size: 1.125rem;
+  font-weight: 500;
+  font-family: var(--oswald-font);
+  text-transform: uppercase;
+  transition: all 0.15s ease-in-out;
+}
+
+header .sticky .nav-link {
+  color: var(--light-black);
+}
+
+header .nav-link:hover {
+  color: var(--light-red);
+}
+
+.nav-link.active {
+  color: red !important;
+}
+
+/* Cart Icon */
+header .cart {
+  position: relative;
+  top: -0.4375rem;
+}
+
+header .roundpoint {
+  width: 16px;
+  height: 16px;
+  background: var(--light-red);
+  border-radius: 50%;
+  color: var(--white);
+  font-size: 11.2px;
+  line-height: 16px;
+  text-align: center;
+  position: absolute;
+  top: 3.2px;
+  right: -8px;
+}
+header .nav-link.active {
+  color: white !important;
+}
+header .nav-link.active:hover {
+  color: var(--light-red) !important;
+}
+header.sticky .nav-link.active {
+  color: white !important;
+}
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  header .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    background-color: rgb(144, 39, 39); /* Keep red background for small screens */
+  }
+
+  header .navbar-toggler {
+    border: none;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  header .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  header .navbar-toggler-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: white;
+  }
+
+  header .nav-link {
+    color: var(--light-red);
+    padding: 1rem !important;
+    text-align: center;
+    background-color: rgb(158, 132, 132);
+    display: block;
+    width: 100%;
+  }
+
+  header .logo img {
+    width: 15rem;
+    padding: 0.5rem;
+    margin-top: 0; /* Prevent logo from moving upwards */
+  }
+
+  header .navbar .navbar-brand {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between; /* Keep the logo centered */
+  }
+
+  .navbar-toggler {
+    margin-left: auto;
+  }
+
+  /* Show the menu below the navbar */
+  .navbar-collapse {
+    width: 100%;
+    position: absolute;
+    top: 6rem;
+    left: 0;
+    background-color: rgb(144, 39, 39);
+    text-align: left;
+    padding-top: 1rem;
+  }
+
+  .navbar-collapse.show {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  header .logo img {
+    width: 12rem;
+  }
+
+  header .nav-link {
+    font-size: 1rem;
+  }
+}

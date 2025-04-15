@@ -1,0 +1,337 @@
+.flex-center-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Hero Section */
+  .hero-lunch {
+    background-image: url('https://img.freepik.com/free-photo/vintage-old-rustic-cutlery-dark_1220-4886.jpg?t=st=1744713417~exp=1744717017~hmac=9bde425abec30aa3c94cbac8b50f256b7603ff0deb3980a343422fde29095fd9&w=1380');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+    border-radius: 10px;
+    position: relative;
+    z-index: 10;
+    color: white;
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    border-radius: 10px;
+  }
+  
+  .hero > * {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* CTA Buttons */
+  .cta-buttons,
+  .final-cta {
+    z-index: 10;
+    position: relative;
+  }
+  
+  .cta-buttons button,
+  .final-cta button {
+    margin: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #d41919;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-buttons button:hover,
+  .final-cta button:hover {
+    background-color: #792727;
+  }
+  
+  /* Sections */
+  .about,
+  .why-choose,
+  .how-it-works,
+  .specials,
+  .testimonials,
+  .final-cta {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .about-heading,
+  .section-title {
+    color: #d41919;
+  }
+  
+  ul,
+  ol {
+    padding-left: 1.5rem;
+  }
+  
+  li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .about-image {
+    max-width: 70%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 8px;
+  }
+  
+  /* Testimonials */
+  .testimonials {
+    animation: fadeInUp 1s ease-out both;
+  }
+  
+  .testimonial-item {
+    background: #fff;
+    padding: 1.5rem;
+    margin: 1rem auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 600px;
+  }
+  
+  .testimonial-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+  
+  .testimonials blockquote {
+    font-style: italic;
+    border-left: 4px solid #ff4d4d;
+    padding-left: 1rem;
+    margin: 1rem auto;
+    color: #333;
+    max-width: 90%;
+  }
+  
+  .testimonials blockquote footer {
+    font-weight: bold;
+    color: #150f0f;
+    margin-top: 1rem;
+  }
+  
+  .testimonials .author {
+    color: #ff4d4d;
+  }
+  
+  .testimonials .designation {
+    font-style: italic;
+    color: #777;
+  }
+  
+  /* Final CTA */
+  .final-cta h2 {
+    font-size: clamp(1.8rem, 3vw, 2.2rem);
+    margin-bottom: 1rem;
+    color: #d41919;
+  }
+  
+  .final-cta p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+  }
+  
+  /* Grid Sections */
+  .why-grid,
+  .how-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+  
+  .why-item,
+  .how-item {
+    background-color: #e50913;
+    border-radius: 12px;
+    padding: 1.5rem;
+    width: 260px;
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: fadeInUp 0.6s ease forwards;
+    animation-delay: calc(var(--i, 1) * 0.1s);
+  }
+  
+  .why-item:hover,
+  .how-item:hover {
+    transform: scale(1.05) rotate(-1deg);
+    background-color: #bc1c22;
+    box-shadow: 0 10px 25px rgba(8, 3, 0, 0.2);
+  }
+  
+  .why-item strong,
+  .how-item strong {
+    display: block;
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    color: #150f0f;
+  }
+  
+  /* Table Section */
+  .tiffin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  .tiffin-table th,
+  .tiffin-table td {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .tiffin-table th {
+    background-color: #b71c22;
+    color: white;
+    font-size: 1.1rem;
+  }
+  
+  .tiffin-table td {
+    background-color: #f9f9f9;
+  }
+  
+  .tiffin-table tr:nth-child(even) {
+    background-color: #fafafa;
+  }
+  
+  .tiffin-table tr:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Menu Button */
+  .view-menu {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 2rem;
+    background: linear-gradient(45deg, #e50913, #b71c22);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .view-menu:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s ease;
+  }
+  
+  .view-menu:hover {
+    background: linear-gradient(45deg, #ed6464, #ed0808);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+  }
+  
+  .view-menu:hover:before {
+    width: 0;
+    height: 0;
+  }
+  
+  .view-menu:focus-visible {
+    outline: 2px dashed #ff4d4d;
+  }
+  
+  /* RESPONSIVE ADJUSTMENTS */
+  @media (max-width: 992px) {
+    .why-item,
+    .how-item {
+      width: 45%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .why-item,
+    .how-item {
+      width: 90%;
+    }
+  
+    .cta-buttons button,
+    .final-cta button {
+      width: 100%;
+      max-width: 300px;
+    }
+  
+    .testimonials .testimonial-item {
+      width: 95%;
+    }
+  
+    .about-image {
+      max-width: 90%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .hero h1 {
+      font-size: 2rem;
+      margin-top: 60px;
+    }
+  
+    .cta-buttons button,
+    .final-cta button {
+      width: 100%;
+      max-width: 280px;
+      padding: 1rem;
+    }
+  
+    .view-menu {
+      width: 100%;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+    }
+  
+    .final-cta h2 {
+      font-size: 1.8rem;
+    }
+  
+    .tiffin-table th,
+    .tiffin-table td {
+      padding: 0.8rem;
+      font-size: 0.9rem;
+    }
+  
+    .testimonials blockquote {
+      margin: 1rem;
+      font-size: 0.95rem;
+    }
+  }
+  

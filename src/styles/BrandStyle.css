@@ -1,0 +1,140 @@
+/* brands.css */
+
+.brands-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* === Hero Section === */
+.hero {
+  background: linear-gradient(to right, #1c1c1c, #2d2d2d);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  background-image: url('https://img.freepik.com/free-photo/closeup-plate-pasta-gift-roses-vegetables-concept-valentine-s-day_181624-61019.jpg?t=st=1744616557~exp=1744620157~hmac=df116e0f648e892bf5d43586a91da508dd613cfb1af9a684d31a381da4ca4626&w=1380');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+.hero-btn {
+  padding: 12px 30px;
+  font-size: 1rem;
+  background-color: #ff4c60;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #e03e4e;
+}
+
+/* === Brands Grid Section === */
+.brands-details {
+  padding: 60px 40px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.brands-details h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Grid */
+.brand-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Brand Card */
+.brand-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.brand-card:hover {
+  transform: translateY(-5px);
+}
+
+.brand-card img {
+  max-width: 120px;
+  margin-bottom: 20px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.brand-card img:hover {
+  filter: grayscale(0%);
+}
+
+.brand-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.brand-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.brand-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.brand-buttons button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  background-color: #ec2727;
+  color: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.brand-buttons button:hover {
+  background-color: #b30000;
+}
